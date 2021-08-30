@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AnimationSample</string>
+    <string name="message">Hello, JetpackCompose.\nHello, Animation Demo.\nHello, Android. \n</string>
 </resources>

@@ -8,10 +8,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.animationsample.demo.AnimatedVisibilityDemo
-import com.example.animationsample.demo.UpdateTransitionDemo
+import com.example.animationsample.demo.AnimateContentSizeDemo
 import com.example.animationsample.ui.theme.AnimationSampleTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +23,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background,) {
                     // AnimateAsStateDemo()
                     // UpdateTransitionDemo()
-                    AnimatedVisibilityDemo()
+                    // AnimatedVisibilityDemo()
+                    AnimateContentSizeDemo()
                 }
             }
         }

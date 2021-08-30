@@ -26,8 +26,10 @@ internal fun AnimatedVisibilityDemo() {
         modifier = Modifier.fillMaxWidth()
     ) {
         Spacer(modifier = Modifier.height(16.dp))
-        AnimatedVisibility(visible = visible, enter = slideInVertically(),
-        exit = slideOutVertically()) {
+        AnimatedVisibility(
+            visible = visible, enter = slideInVertically(),
+            exit = slideOutVertically()
+        ) {
             Box(
                 modifier = Modifier
                     .size(200.dp)
@@ -38,7 +40,7 @@ internal fun AnimatedVisibilityDemo() {
         Button(
             onClick = { visible = !visible }
         ) {
-            Text(text = if(visible) "VISIBLE" else "GONE")
+            Text(text = if (visible) "VISIBLE" else "GONE")
         }
     }
 }
