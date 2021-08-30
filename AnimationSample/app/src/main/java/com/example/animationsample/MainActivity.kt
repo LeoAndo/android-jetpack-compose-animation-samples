@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.animationsample.demo.AnimateContentSizeDemo
+import com.example.animationsample.demo.CrossFadeDemo
 import com.example.animationsample.ui.theme.AnimationSampleTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,7 +25,8 @@ class MainActivity : ComponentActivity() {
                     // AnimateAsStateDemo()
                     // UpdateTransitionDemo()
                     // AnimatedVisibilityDemo()
-                    AnimateContentSizeDemo()
+                    // AnimateContentSizeDemo()
+                    CrossFadeDemo()
                 }
             }
         }
