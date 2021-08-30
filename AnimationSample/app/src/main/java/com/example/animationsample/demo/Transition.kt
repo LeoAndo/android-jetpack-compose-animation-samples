@@ -29,14 +29,18 @@ private fun findByOrdinal(ordinal: Int): BoxState {
 internal fun UpdateTransitionDemo() {
     var boxState by remember { mutableStateOf(BoxState.Small) }
     val transition = updateTransition(targetState = boxState, label = "")
-    val selectColor by transition.animateColor(label = "") { state ->
+    val selectColor by transition.animateColor(label = "", transitionSpec = {
+        if (this.targetState == BoxState.Large) tween(1000) else spring()
+    }) { state ->
         when (state) {
             BoxState.Small -> Color.Red
             BoxState.Medium -> Color.Blue
             BoxState.Large -> Color.Yellow
         }
     }
-    val selectSize by transition.animateDp(label = "") { state ->
+    val selectSize by transition.animateDp(label = "", transitionSpec = {
+        if (this.targetState == BoxState.Large) tween(1000) else spring()
+    }) { state ->
         when (state) {
             BoxState.Small -> 50.dp
             BoxState.Medium -> 100.dp
@@ -51,7 +55,7 @@ internal fun UpdateTransitionDemo() {
 
         Spacer(modifier = Modifier.height(16.dp))
         Button(
-            onClick = { boxState = findByOrdinal((boxState.ordinal+1) % BoxState.values().size) }
+            onClick = { boxState = findByOrdinal((boxState.ordinal + 1) % BoxState.values().size) }
         ) {
             Text(text = "CHANGE COLOR AND SIZE")
         }
