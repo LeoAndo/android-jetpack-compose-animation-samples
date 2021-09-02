@@ -1,7 +1,10 @@
 package com.example.animationsample.demo
 
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.repeatable
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
@@ -61,6 +64,39 @@ internal fun AnimateAsStateDemo2() {
                 .size(200.dp)
                 .graphicsLayer(alpha = selectAlphaValue)
                 .background(color = Color.Red)
+        )
+    }
+}
+
+// use repeatable
+@Composable
+internal fun AnimateAsStateDemo3() {
+    var colorState by remember { mutableStateOf(true) }
+    val selectColor by animateColorAsState(
+        targetValue = if (colorState) Color.Blue else Color.Green,
+        animationSpec = repeatable(
+            iterations = 5,
+            animation = tween(durationMillis = 1000),
+            repeatMode = RepeatMode.Restart
+        )
+    )
+
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier.fillMaxWidth()
+    ) {
+
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(
+            onClick = { colorState = !colorState }
+        ) {
+            Text(text = "CHANGE COLOR")
+        }
+        Spacer(modifier = Modifier.height(16.dp))
+        Box(
+            modifier = Modifier
+                .size(200.dp)
+                .background(color = selectColor)
         )
     }
 }
