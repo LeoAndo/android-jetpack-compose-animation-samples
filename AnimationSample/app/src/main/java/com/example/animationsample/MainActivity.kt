@@ -22,7 +22,8 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     color = MaterialTheme.colors.background,) {
                     // AnimateAsStateDemo()
-                    AnimateAsStateDemo2()
+                    // AnimateAsStateDemo2()
+                    AnimateAsStateDemo3()
                     // UpdateTransitionDemo()
                     // AnimatedVisibilityDemo()
                     //AnimatedVisibilityDemo2()
