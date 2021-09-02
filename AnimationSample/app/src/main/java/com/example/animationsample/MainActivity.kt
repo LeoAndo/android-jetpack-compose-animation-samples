@@ -9,10 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.animationsample.demo.AnimateContentSizeDemo
-import com.example.animationsample.demo.AnimatedContentDemo
-import com.example.animationsample.demo.AnimatedVisibilityDemo2
-import com.example.animationsample.demo.CrossFadeDemo
+import com.example.animationsample.demo.*
 import com.example.animationsample.ui.theme.AnimationSampleTheme
 
 class MainActivity : ComponentActivity() {
@@ -25,12 +22,13 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     color = MaterialTheme.colors.background,) {
                     // AnimateAsStateDemo()
+                    AnimateAsStateDemo2()
                     // UpdateTransitionDemo()
                     // AnimatedVisibilityDemo()
                     //AnimatedVisibilityDemo2()
                     // AnimateContentSizeDemo()
                     // CrossFadeDemo()
-                    AnimatedContentDemo()
+                    // AnimatedContentDemo()
                 }
             }
         }
