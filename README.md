@@ -11,6 +11,6 @@ https://github.com/LeoAndo/android-jetpack-compose-animation-samples/tree/main/A
 # PR
 https://github.com/LeoAndo/android-jetpack-compose-animation-samples/pulls?q=is%3Apr+is%3Aclosed
 
-# refs
+# references
 https://www.youtube.com/watch?v=7yY2OocGiQU<br>
 https://developer.android.com/jetpack/compose/animation?hl=ja#overview<br>
